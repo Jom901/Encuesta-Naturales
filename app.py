@@ -28,7 +28,7 @@ def form():
   elif request.method == 'POST':
     # Get form parameters
     number = request.form.get('studentNumber', '')
-    answer = request.form.get('answer', '')
+    paroAnswer = request.form.get('paroAnswer', '')
 
     # Si el numero no esta en nuestra lista
     if number not in ALL_STUDENT_NUMBERS:
@@ -37,7 +37,7 @@ def form():
     # Anadir la entrada solamente si no existe
     previousEntry = Entry.query.filter_by(studentNumber=number).first()
     if previousEntry is None:
-      entry = Entry(number, answer)
+      entry = Entry(number, paroAnswer)
       db.session.add(entry)
       db.session.commit()
 
