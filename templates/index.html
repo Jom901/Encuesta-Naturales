@@ -1,0 +1,44 @@
+<html>
+<head>
+  <title>UPRRP Encuesta</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <h2>Llena esta encuesta por favor.</h2>
+      <form class="form-horizontal" action="/" method="POST">
+      <div class="form-group">
+        <label for="inputStudentNumber" class="col-sm-2 control-label">Numero de Estudiante</label>
+        <div class="col-sm-10">
+          <input type="studentNumber" class="form-control" id="inputStudentNumber" placeholder="801-XX-XXXX" maxlength="11" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputStudentNumber" class="col-sm-2 control-label">Estás de acuerdo con el paro de 48 horas en la UPR Río Piedras pautado para los días 14 y 15 de Mayo de 2015</label>
+        <div class="col-sm-10">
+          <div class="radio">
+            <label>
+              <input type="radio" name="answer" id="answerYes" value="yes" checked>
+              Sí
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="answer" id="answerNo" value="no">
+              No
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <button type="submit" class="btn btn-default">Someter</button>
+        </div>
+      </div>
+      </form>
+    </div>
+  </div>
+  <script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+</body>
+</html>
