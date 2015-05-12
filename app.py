@@ -1,3 +1,5 @@
+# TODO: para cada pregunta nueva ahi que agregar en index.html una entrada nueva al form y repetir lo que se hace aqui en "paroAnswer"
+
 import os
 
 from flask import Flask, render_template, request
