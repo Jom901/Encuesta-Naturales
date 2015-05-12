@@ -21,27 +21,27 @@ class Entry(db.Model):
   def __repr__(self):
     return "Contestacion de - %s" % self.studentNumber
 
-@app.route('/')
+@app.route('/', methods=["GET", "POST"])
 def form():
   if request.method == 'GET':
     return render_template('index.html')
   elif request.method == 'POST':
     # Get form parameters
-    number = request.form['studentNumber']
-    answer = request.form['answer']
+    number = request.form.get('studentNumber', '')
+    answer = request.form.get('answer', '')
 
     # Si el numero no esta en nuestra lista
     if number not in ALL_STUDENT_NUMBERS:
       return render_template("error.html")
 
-    # Añadir la entrada solamente si no existe
+    # Anadir la entrada solamente si no existe
     previousEntry = Entry.query.filter_by(studentNumber=number).first()
     if previousEntry is None:
       entry = Entry(number, answer)
       db.session.add(entry)
       db.session.commit()
 
-    return render_tempalte("thanks.html")
+    return render_template("thanks.html")
 
 
 
