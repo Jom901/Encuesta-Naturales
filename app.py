@@ -2,10 +2,13 @@
 
 import os
 
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, json
 from flask.ext.sqlalchemy import SQLAlchemy
 
-ALL_STUDENT_NUMBERS = ["801-11-6705", "401-09-7818"]
+SITE_ROOT = os.path.realpath(os.path.dirname(__file__))
+json_url = os.path.join(SITE_ROOT, "static", "numbers.json")
+data = json.load(open(json_url))
+ALL_STUDENT_NUMBERS = data["numbers"]
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL', 'sqlite:////tmp/test.db')
