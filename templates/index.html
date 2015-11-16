@@ -4,21 +4,12 @@
   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
 </head>
 <body>
-  <div class="container">
-    <div class="row">
-      <h2>Esta encuesta es para estudiantes de la Facultad de Ciencias Naturales. Por favor llena esta encuesta. Recuerda usar las rayas para poner tu numero de estudiantes.</h2>
-      <form class="form-horizontal" action="/" method="POST">
-      <div class="form-group">
-        <label for="inputStudentNumber" class="col-sm-2 control-label">Numero de Estudiante</label>
-        <div class="col-sm-10">
-          <input type="text" name="studentNumber" class="form-control" id="inputStudentNumber" placeholder="801-XX-XXXX" maxlength="11" required>
-        </div>
-      </div>
-      <a href="https://www.facebook.com/gilberto.dominguez/posts/10153147923176121?pnref=story">Propuesta de sistema de cámaras ante el Senado Académico </a>
-      <a href="https://docs.google.com/document/d/1QM0NOgVSv-BcNbNnMXx197zkQHz_AQIQ4yLIEbSo29Q/edit?usp=sharing">Carta abierta a la comunidad del Senador de Naturales</a>
-      <a href="https://docs.google.com/document/d/1UWmQvhakhrMzZ-hhDsW5z2wb9CNU6Q92xFw3d906c5M/edit?usp=sharing">Llamado al estudio de alternativas</a>
+<h2>Infórmate</h2>
+      <p><a href="https://www.facebook.com/gilberto.dominguez/posts/10153147923176121?pnref=story">Propuesta de sistema de cámaras ante el Senado Académico </a></p>
+      <p><a href="https://docs.google.com/document/d/1QM0NOgVSv-BcNbNnMXx197zkQHz_AQIQ4yLIEbSo29Q/edit?usp=sharing">Carta abierta a la comunidad del Senador de Naturales</a></p>
+      <p><a href="https://docs.google.com/document/d/1UWmQvhakhrMzZ-hhDsW5z2wb9CNU6Q92xFw3d906c5M/edit?usp=sharing">Llamado al estudio de alternativas</a></p>
 
-      <p>En breve, el consejo de Ciencias Naturales no recomienda que se adopte esta propuesta en su forma actual ya que</p>
+      <p>En breve, el consejo de Ciencias Naturales no recomienda que se adopte esta propuesta en su forma actual ya que:</p>
       <ul>
       <li>No se le tiene que informar a un individuo si se reproduce una grabación de sí ni para qué propósito.</li>
       <li>Las cámaras en efecto protegen la propiedad, no al estudiantado.</li>
@@ -29,6 +20,18 @@
       <li>No se han explorado alternativas al monitoreo</li>
       <li>No se ha hecho estudio acerca de la efectividad de esta u otras medidas en términos de la protección que le brinda a la comunidad universitaria.</li>
       </ul>
+<h2>Encuesta: </h2>
+
+  <div class="container">
+    <div class="row">
+      <h2>  Esta encuesta buscan recopilar la opinión del estudiantado de la facultad de Ciencias Naturales. La misma requiere que incluya su número de estudiante en el formato “XXX-XX-XXX”. Para llevar a cabo estas encuestas electrónicas de nuestro estudiantado en específico requerimos una lista digital de los numeros de estudiante de nuestra facultad. Dado que la lista de referencia actualizada no se nos proveyó, es posible que los estudiantes reclasificados este semestre no puedan votar. Lamentamos el inconveniente.</h2>
+      <form class="form-horizontal" action="/" method="POST">
+      <div class="form-group">
+        <label for="inputStudentNumber" class="col-sm-2 control-label">Numero de Estudiante</label>
+        <div class="col-sm-10">
+          <input type="text" name="studentNumber" class="form-control" id="inputStudentNumber" placeholder="801-XX-XXXX" maxlength="11" required>
+        </div>
+      </div>
 
       <div class="form-group">
       <label for="inputStudentNumber" class="col-sm-6 control-label">1) Estás de acuerdo con que se implemente la propuesta de cámaras en su forma actual?</label>
@@ -52,13 +55,13 @@
       <div class="col-sm-10">
           <div class="radio">
             <label>
-              <input type="radio" name="Answer1" value="yes">
+              <input type="radio" name="Answer2" value="yes">
               Sí
             </label>
           </div>
           <div class="radio">
             <label>
-              <input type="radio" name="Answer1" value="no">
+              <input type="radio" name="Answer2" value="no">
               No
             </label>
           </div>
@@ -69,19 +72,117 @@
       <div class="col-sm-10">
           <div class="radio">
             <label>
-              <input type="radio" name="Answer1" value="yes">
+              <input type="radio" name="Answer3" value="yes">
               Sí
             </label>
           </div>
           <div class="radio">
             <label>
-              <input type="radio" name="Answer1" value="no">
+              <input type="radio" name="Answer3" value="no">
               No
             </label>
           </div>
         </div>
       </div>
-      <div class="form-group">
+      <label for="inputStudentNumber" class="col-sm-6 control-label">4) Crees que se deben explorar alternativas a las cámaras?</label>
+      <div class="col-sm-10">
+          <div class="radio">
+            <label>
+              <input type="radio" name="Answer4" value="yes">
+              Sí
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="Answer4" value="no">
+              No
+            </label>
+          </div>
+        </div>
+      </div>
+      Oh, here she comes
+      <label for="inputStudentNumber" class="col-sm-6 control-label">5) Qué alternativas propones a las cámaras crees que se deben considerar?</label>
+      <div class="col-sm-10">
+          <div class="radio">
+            <label>
+              <input type="radio" name="Answer5" value="yes">
+              Sí
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="Answer5" value="no">
+              No
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <label for="inputStudentNumber" class="col-sm-6 control-label">6) Leíste la carta abierta?</label>
+      <div class="col-sm-10">
+          <div class="radio">
+            <label>
+              <input type="radio" name="Answer6" value="yes">
+              Sí
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="Answer6" value="no">
+              No
+            </label>
+          </div>
+        </div>
+      </div>
+      <label for="inputStudentNumber" class="col-sm-6 control-label">7) Leíste el desglose de deficiencias?</label>
+      <div class="col-sm-10">
+          <div class="radio">
+            <label>
+              <input type="radio" name="Answer7" value="yes">
+              Sí
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="Answer7" value="no">
+              No
+            </label>
+          </div>
+        </div>
+      </div>
+      <label for="inputStudentNumber" class="col-sm-6 control-label">8) Leíste la propuesta actual ante el senado?</label>
+      <div class="col-sm-10">
+          <div class="radio">
+            <label>
+              <input type="radio" name="Answer8" value="yes">
+              Sí
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="Answer8" value="no">
+              No
+            </label>
+          </div>
+        </div>
+      </div>
+      <label for="inputStudentNumber" class="col-sm-6 control-label">9) Prefieres que se consulte al estudiantado de naturales de esta forma en vez de mediante asambleas?</label>
+      <div class="col-sm-10">
+          <div class="radio">
+            <label>
+              <input type="radio" name="Answer9" value="yes">
+              Sí
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="Answer9" value="no">
+              No
+            </label>
+          </div>
+        </div>
+      </div>
+<!--       <div class="form-group">
         <label for="inputStudentNumber" class="col-sm-6 control-label">1) Participaste en la asamblea multisectorial del 12 de Mayo?</label>
         <div class="col-sm-10">
           <div class="radio">
@@ -984,7 +1085,7 @@
             </label>
           </div>
         </div>
-      </div>
+      </div> -->
 
       </div>
       <div class="form-group">
