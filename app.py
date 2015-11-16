@@ -54,7 +54,7 @@ def form():
     number = request.form.get('studentNumber', '')
 
     # Si el numero no esta en nuestra lista
-    if number not in ALL_STUDENT_NUMBERS and not prepa(number):
+    if number not in ALL_STUDENT_NUMBERS:
       return render_template("error.html")
 
     # Anadir la entrada solamente si no existe
