@@ -1,5 +1,5 @@
 # Encuesta-Naturales
-A small form app created by [Christian Rodriguez](https://github.com/chrisrodz). Often times, the student senate in the
+A small form app created by [Christian Rodriguez](https://github.com/chrisrodz) and [Xiomara Figueroa](https://github.com/Xiomara7). Often times, the student senate in the
 University of Puerto Rico require a website with which they can poll across the student body with official student numbers.
 This small flask app helps aleviate this problem, and subsequently digitalizes all answers into a database, which can then
 be datamined later on for statistics.
