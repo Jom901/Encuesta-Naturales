@@ -1,7 +1,6 @@
 # TODO: para cada pregunta nueva ahi que agregar en index.html una entrada nueva al form y repetir lo que se hace aqui en "paroAnswer"
 
 import os
-
 from flask import Flask, render_template, request, json
 from flask.ext.sqlalchemy import SQLAlchemy
 
@@ -13,8 +12,8 @@ ALL_STUDENT_NUMBERS = data["numbers"]
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL', 'sqlite:////tmp/test.db')
 db = SQLAlchemy(app)
-def prepa(idString):
-  return "15" == idString.split("-")[1]
+# def prepa(idString):
+#   return "15" == idString.split("-")[1]
 
 class Entry(db.Model):
   id = db.Column(db.Integer, primary_key=True)
