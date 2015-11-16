@@ -22,11 +22,10 @@ class Entry(db.Model):
   answer2 = db.Column(db.String(10))
   answer3 = db.Column(db.String(10))
   answer4 = db.Column(db.String(10))
-  answer5 = db.Column(db.String(9999))
+  answer5 = db.Column(db.String(10))
   answer6 = db.Column(db.String(10))
   answer7 = db.Column(db.String(10))
   answer8 = db.Column(db.String(10))
-  answer9 = db.Column(db.String(10))
 
   def __init__(self, **kwargs):
     self.studentNumber = kwargs.get("studentNumber")
@@ -38,7 +37,6 @@ class Entry(db.Model):
     self.answer6 = kwargs.get("answer6", "n/a")
     self.answer7 = kwargs.get("answer7", "n/a")
     self.answer8 = kwargs.get("answer8", "n/a")
-    self.answer9 = kwargs.get("answer9", "n/a")
 
   def __repr__(self):
     return "Contestacion de - %s" % self.studentNumber
@@ -68,7 +66,6 @@ def form():
       args["answer6"] = request.form.get("Answer6", "n/a")
       args["answer7"] = request.form.get("Answer7", "n/a")
       args["answer8"] = request.form.get("Answer8", "n/a")
-      args["answer9"] = request.form.get("Answer9", "n/a")
       entry = Entry(**args)
       db.session.add(entry)
       db.session.commit()
