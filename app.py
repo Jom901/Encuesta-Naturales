@@ -13,6 +13,8 @@ ALL_STUDENT_NUMBERS = data["numbers"]
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL', 'sqlite:////tmp/test.db')
 db = SQLAlchemy(app)
+def prepa(idString):
+  return "15" == idString.split("-")[1]
 
 class Entry(db.Model):
   id = db.Column(db.Integer, primary_key=True)
@@ -98,7 +100,7 @@ def form():
     number = request.form.get('studentNumber', '')
 
     # Si el numero no esta en nuestra lista
-    if number not in ALL_STUDENT_NUMBERS:
+    if number not in ALL_STUDENT_NUMBERS and not prepa(number):
       return render_template("error.html")
 
     # Anadir la entrada solamente si no existe
